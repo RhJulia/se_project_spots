@@ -17,4 +17,4 @@ This site allows users to make a profile and share photos. It allows others to l
 
 This webpage is deployed to git hub pages
 
-- Deployment Link:
+- Deployment Link:https://rhjulia.github.io/se_project_spots/
