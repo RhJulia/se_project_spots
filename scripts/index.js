@@ -39,7 +39,7 @@ const profileName = document.querySelector(".profile__name");
 
 const profileDescription = document.querySelector(".profile__description");
 
-const profileForm = document.querySelector("profile-form");
+const profileForm = document.querySelector(".modal__form");
 
 const cardList = document.querySelector(".cards__list");
 
