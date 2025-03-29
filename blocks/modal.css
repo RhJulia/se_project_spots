@@ -13,7 +13,7 @@
   padding: 0 20px;
 }
 
-.modal__opened {
+.modal_opened {
   visibility: visible;
 }
 
@@ -64,6 +64,12 @@
 .modal__input {
   padding: 16px 12px;
   border-radius: 8px;
+}
+
+.modal__input:hover {
+  border: 2px solid #333;
+  background-color: #fff;
+  cursor: pointer;
 }
 
 .modal__submit-btn {

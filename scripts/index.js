@@ -39,18 +39,18 @@ const profileName = document.querySelector(".profile__name");
 
 const profileDescription = document.querySelector(".profile__description");
 
-const profileForm = document.querySelector(".modal__form");
+const profileForm = document.querySelector("profile-form");
 
 const cardList = document.querySelector(".cards__list");
 
 function openModal() {
   nameInput.value = profileName.textContent;
   descriptionInput.value = profileDescription.textContent;
-  editProfileModal.classList.add("modal__opened");
+  editProfileModal.classList.add("modal_opened");
 }
 
 function closeModal() {
-  editProfileModal.classList.remove("modal__opened");
+  editProfileModal.classList.remove("modal_opened");
 }
 
 function handleProfileFormSubmit(evt) {
