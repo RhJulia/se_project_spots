@@ -38,6 +38,11 @@
   background-color: transparent;
   color: rgba(33, 33, 33, 1);
   border: 2px;
+  transition: background-image 0.2s;
+}
+/*Hover state for close button*/
+.modal__close-btn:hover {
+  background-image: url(../images/closebtn-hover.svg);
 }
 
 .modal__title {
@@ -84,6 +89,36 @@
   font-size: 16px;
   line-height: 100%;
 }
+
+/* Adding for preview*/
+.modal__container_type_preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 90vw;
+  max-height: 90vh;
+  margin: auto;
+  padding: 0;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.modal__image {
+  max-width: 80vw;
+  max-height: 80vh;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.modal__caption {
+  margin-top: 12px;
+  font-size: 16px;
+  color: #212121;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+/*new code end here*/
 
 @media screen and (max-width: 627px) {
   .modal {
