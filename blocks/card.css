@@ -67,10 +67,10 @@
 /* Delete button*/
 .card__delete-btn {
   position: absolute;
-  top: 10px;
+  top: 9px;
   right: 10px;
-  width: 24px;
-  height: 24px;
+  width: 12px;
+  height: 15px;
   background: transparent url("../images/trash.svg") center/contain no-repeat;
   border: none;
   cursor: pointer;

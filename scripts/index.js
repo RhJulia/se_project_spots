@@ -93,8 +93,6 @@ newPostForm.addEventListener("submit", (evt) => {
     link: imageInput.value,
   };
 
-  console.log("New card submitted:", newCardData);
-
   const newCard = getCardElement(newCardData);
   cardList.prepend(newCard);
   closeModal(newPostModal);
