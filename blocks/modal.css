@@ -102,6 +102,8 @@
 }
 
 .modal__container_type_preview {
+  /* Add position relative for testing*/
+  position: relative;
   padding: 16px;
 }
 
@@ -146,6 +148,7 @@
   }
 
   .modal__container {
+    width: 90%;
     padding: 12px;
   }
 
@@ -160,9 +163,18 @@
     right: 12px;
   }
   /*Adding for Close button mobile positioning*/
-  .modal__container_type_preview .modal__close-btn {
-    top: -36px;
-    right: -36px;
+  .modal__close-btn_type_image-preview {
+    top: 10x;
+    right: 10px;
+    position: absolute;
+    z-index: 10;
+  }
+
+  /*adding modal image to control size of image for mobile version*/
+  .modal__image {
+    max-height: none;
+    max-width: none;
+    width: 100%;
   }
   .modal__label {
     margin-bottom: 24px;

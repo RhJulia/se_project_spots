@@ -68,10 +68,13 @@
 .card__delete-btn {
   position: absolute;
   top: 9px;
+  /* was top 9 right 10 width 12 height 15*/
   right: 10px;
-  width: 12px;
-  height: 15px;
-  background: transparent url("../images/trash.svg") center/contain no-repeat;
+  width: 32px;
+  height: 32px;
+  background: rgba(0, 0, 0, 0) url("../images/trash.svg") center/contain
+    no-repeat;
+  background-size: 12px 15px;
   border: none;
   cursor: pointer;
 }
