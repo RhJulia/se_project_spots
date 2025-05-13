@@ -49,9 +49,11 @@
   background-image: url(../images/closebtn-hover.svg) center/contain no-repeat;
 }
 /* new code from corrections*/
-.modal__close_type_image-preview {
+.modal__close-btn_type_image-preview {
+  background: url(../images/closebtn-imagemodal-icon.svg) no-repeat center /
+    cover;
   top: 0;
-  right: -32px;
+  right: -50px;
   opacity: 1;
 }
 
@@ -101,12 +103,6 @@
   line-height: 100%;
 }
 
-.modal__container_type_preview {
-  /* Add position relative for testing*/
-  position: relative;
-  padding: 16px;
-}
-
 .modal__image {
   max-width: 80vw;
   max-height: 80vh;
@@ -142,13 +138,10 @@
   .modal__caption {
     text-align: left;
     justify-content: flex-start;
-    font-size: 14px;
-    padding-left: 12px;
-    padding-right: 12px;
+    font-size: 16px;
   }
 
   .modal__container {
-    width: 90%;
     padding: 12px;
   }
 
@@ -164,7 +157,7 @@
   }
   /*Adding for Close button mobile positioning*/
   .modal__close-btn_type_image-preview {
-    top: 10x;
+    top: -45px;
     right: 10px;
     position: absolute;
     z-index: 10;
