@@ -11,11 +11,13 @@
   justify-content: center;
   display: none;
   padding: 0 20px;
+  transition: visibility 0.3s ease-in, opacity 0.3s ease-in;
 }
 
 .modal_opened {
   display: flex;
   visibility: visible;
+  transition: visibility 0.3s ease-in, opacity 0.3s ease-in;
 }
 
 .modal__container {
