@@ -12,13 +12,14 @@
   padding: 0 20px;
   visibility: hidden;
   opacity: 0;
-  transition: ease-in, opacity 0.3s ease-in;
+  transition: visibility 0.3s, opacity 0.3s, ease-in;
 }
 
 .modal_opened {
   display: flex;
   visibility: visible;
   opacity: 1;
+  transition: visibility 0.3s, opacity 0.3s ease-in;
 }
 
 .modal__container {
