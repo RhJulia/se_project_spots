@@ -25,13 +25,33 @@ const initialCards = [
   },
 ];
 
+// --- Modal Close Handlers ---
+function handleEscape(evt) {
+  if (evt.key === "Escape") {
+    const openModal = document.querySelector(".modal_opened");
+    if (openModal) {
+      closeModal(openModal);
+    }
+  }
+}
+
+function handleOverlayClick(evt) {
+  if (evt.target.classList.contains("modal")) {
+    closeModal(evt.target);
+  }
+}
+
 // Modal Utility Functions
 function openModal(modal) {
   modal.classList.add("modal_opened");
+  document.addEventListener("keydown", handleEscape);
+  modal.addEventListener("mousedown", handleOverlayClick);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_opened");
+  document.removeEventListener("keydown", handleEscape);
+  modal.removeEventListener("mousedown", handleOverlayClick);
 }
 
 //DOM Elements
@@ -64,10 +84,21 @@ const previewCloseButton = previewModal.querySelector(".modal__close-btn");
 const cardList = document.querySelector(".cards__list");
 
 //Event Listeners
-// Profile
 profileEditButton.addEventListener("click", () => {
+  // Pre-fill form fields with current profile data
   nameInput.value = profileName.textContent;
   descriptionInput.value = profileDescription.textContent;
+
+  // Get input list and submit button for this form
+  const inputList = Array.from(
+    profileForm.querySelectorAll(settings.inputSelector)
+  );
+  const submitButton = profileForm.querySelector(settings.submitButtonSelector);
+
+  // Re-evaluate form state so Save button updates properly
+  toggleButtonState(inputList, submitButton, settings);
+
+  // Open the modal after form is ready
   openModal(editProfileModal);
 });
 
@@ -98,7 +129,7 @@ newPostForm.addEventListener("submit", (evt) => {
   cardList.prepend(newCard);
   closeModal(newPostModal);
   newPostForm.reset();
-  disableButton(modalSubmitButton);
+  disableButton(modalSubmitButton, settings);
 });
 
 // Preview of the Modal Close
